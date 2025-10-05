@@ -3,12 +3,13 @@
 
 ### Project structure
 02_mypage_33724876/
+
  index.js                               # Main server file (Express setup and routes)
 
  views/                                 # Template folder
 
         home.ejs                        # Home page template
-        
+
         about.ejs                       # About page template
 
 
