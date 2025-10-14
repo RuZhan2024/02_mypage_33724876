@@ -3,6 +3,9 @@
 Coursework for **Dynamic Web Applications**.
 A minimal web app implemented with **Node.js core modules only**. It serves HTML templates, static assets (CSS/JS). A tiny placeholder-based renderer handles `<%= key %>` tokens in templates.
 
+## Application links on Virtual Machine
+home=http://www.doc.gold.ac.uk/usr/122/
+
 ## 1. Requirements
 
 * Node.js (If it doesn’t work on your current Node version, switch to Node 18+)
