@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="<%= lang %>">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>My Page</title>
+  <link rel="stylesheet" href="/public/style.css" />
 </head>
-<body>
-  <h1>Hi. I am <%=studentName %>!</h1>
-  <h2>My studentID is: <%=studentID %></h2>
-  <h2><%=greeting %></h2>
-  <p>This page is rendered from an EJS template.</p>
-  <p><a href="/">Home</a> | <a href="/about">About</a></p>
+<body class="theme">
+  <header class="nav">
+    <div class="brand"><a href="/">MyPage</div>
+    <nav>
+      <a class="navItem" href="/">Home</a>
+      <a class="navItem" href="/about">About</a>
+      <button id="themeBtn" class="btn small" aria-label="Toggle theme">🌗</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Hello, I'm <span class="accent"><%= studentName %></span>!</h1>
+      <p>Student ID: <strong><%= studentID %></strong></p>
+      <p class="muted"><%= greeting %></p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Server time</h2>
+        <p id="time">—</p>
+        <button id="timeBtn" class="btn">Get time from server</button>
+      </div>
+
+  
+
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    My Coursework of IS52027E/IS53076A: DYNAMIC WEB APPLICATIONS (2025-26)
+  </footer>
+
+  <script src="/public/app.js" defer></script>
 </body>
 </html>
