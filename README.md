@@ -4,7 +4,7 @@
 ### Project structure
 02_mypage_33724876/
 
- index.js                               # Main server file (Express setup and routes)
+ index.js                               # Main server file 
 
  views/                                 # Template folder
 
@@ -14,7 +14,7 @@
 
 
 ### Installation
-* git clone https://github.com/username/02_mypage_33724876.git
+* git clone https://github.com/RuZhan2024/02_mypage_33724876.git
 * cd 02_mypage_33724876
 * npm install
 
