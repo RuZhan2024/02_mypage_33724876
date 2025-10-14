@@ -52,6 +52,7 @@ code { background: rgba(122,162,255,.15); padding: .15rem .35rem; border-radius:
   padding: 1rem 1.1rem;
   box-shadow: 0 10px 30px rgba(0,0,0,.12);
   width: 50vw;
+  margin: 10px;
 }
 .muted { color: var(--muted); }
 .accent { color: var(--accent); }
