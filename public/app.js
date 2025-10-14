@@ -10,19 +10,26 @@
     if (saved === "light") body.classList.add("light");
     themeBtn.addEventListener("click", () => {
       body.classList.toggle("light");
-      sessionStorage.setItem("theme", body.classList.contains("light") ? "light" : "dark");
+      sessionStorage.setItem(
+        "theme",
+        body.classList.contains("light") ? "light" : "dark"
+      );
     });
   }
 
   // Server time
   const timeBtn = $("#timeBtn");
-  const timeEl  = $("#time");
+  const timeEl = $("#time");
   if (timeBtn && timeEl) {
     timeBtn.addEventListener("click", async () => {
       timeBtn.disabled = true;
       timeEl.textContent = "Loading…";
       try {
-        const res = await fetch("/api/time");
+        // Builds a URL relative to the current page (keeps scheme, host, port, and subfolder)
+        const apiUrl = (path) =>
+          new URL(path.replace(/^\/+/, ""), window.location.href);
+        // Server time
+        const res = await fetch(apiUrl('api/time'));
         const data = await res.json();
         timeEl.textContent = new Date(data.now).toLocaleString();
       } catch {
